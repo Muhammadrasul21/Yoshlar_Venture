@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  font-family: 'InterTight',
+
+}
+
+.container {
+  max-width: 1312px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+}
+
+p {
+  font-family: 'InterTight';
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'InterTight';
+  src: url('./assets/fonts/InterTight-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InterTight';
+  src: url('./assets/fonts/InterTight-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InterTight';
+  src: url('./assets/fonts/InterTight-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
