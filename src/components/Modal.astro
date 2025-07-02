@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import downloadIcon from "../assets/li_download-cloud.svg";
 ---
 
 <Layout title="Yoshlar Venture">
@@ -47,10 +46,7 @@ import downloadIcon from "../assets/li_download-cloud.svg";
         <label
           class="cursor-pointer w-[337px] h-[50px] mt-1.5 mb-2 border border-[#F28E46] rounded-xl px-6 py-[17.5px] flex items-center"
         >
-          <div class="flex items-center gap-2">
-            <p class="text-[12px] text-[#F28E46] font-medium">Yuklash</p>
-            <img src={downloadIcon.src} alt="download icon" />
-          </div>
+          <p class="text-[12px] text-[#F28E46] font-medium">Yuklash</p>
           <input type="file" class="hidden" />
         </label>
         <p class="text-[#535862] text-[12px] font-medium">
