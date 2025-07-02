@@ -1,0 +1,96 @@
+<div class="flex flex-col items-start w-[398px] sm:w-[628px]">
+  <div class="text-black dark:text-white">
+    <p class="font-semibold text-xl mb-8 mt-12">Savdo haqida ma'lumot</p>
+
+    <div class="flex flex-col gap-4 mb-6">
+      <p class="font-medium">Hozirda savdo bormi?</p>
+      <div class="flex gap-1">
+        <button
+          class="border dark:border-[#535862] text-[12px] w-[50px] h-[50px] rounded-full text-[#535862] dark:text-white active:bg-[#F28E46] active:text-white active:border-[#F28E46] transition duration-300"
+          >Ha</button
+        >
+        <button
+          class="border dark:border-[#535862] text-[12px] w-[50px] h-[50px] rounded-full text-[#535862] dark:text-white active:bg-[#F28E46] active:text-white active:border-[#F28E46] transition duration-300"
+          >Yo'q</button
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col w-full gap-6 text-black dark:text-white">
+    <div class="flex flex-col gap-1.5 w-full">
+      <p class="text-[12px] font-medium">O‘rtacha oylik doimiy daromad</p>
+      <input
+        type="text"
+        class="bg-[#F8F8F7] dark:bg-inherit dark:border dark:border-[#535862] dark:text-white rounded-[12px] h-[50px] w-full p-4 outline-none"
+      />
+    </div>
+    <div class="flex flex-col gap-1.5 w-full">
+      <p class="text-[12px] font-medium">Moliyalashtirish tarixi</p>
+      <input
+        type="text"
+        class="bg-[#F8F8F7] dark:bg-inherit dark:border dark:border-[#535862] dark:text-white rounded-[12px] h-[50px] w-full p-4 outline-none"
+      />
+    </div>
+    <div class="flex flex-col gap-4 mt-6">
+      <p class="font-medium">Oldin investitsiya jalb qilganmisiz?</p>
+      <div class="flex gap-1">
+        <button
+          class="w-[50px] h-[50px] rounded-full bg-[#F28E46] text-white text-[12px]"
+          >Ha</button
+        >
+        <button
+          class="border dark:border-[#535862] text-[12px] w-[50px] h-[50px] rounded-full text-[#535862] dark:text-white active:bg-[#F28E46] active:text-white active:border-[#F28E46] transition duration-300"
+          >Yo'q</button
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col w-full gap-6 mt-6 text-black dark:text-white">
+    <div class="flex flex-col gap-1.5 w-full">
+      <p class="text-[12px] font-medium">Umumiy miqdor</p>
+      <input
+        type="text"
+        class="bg-[#F8F8F7] dark:bg-inherit dark:border dark:border-[#535862] dark:text-white rounded-[12px] h-[50px] w-full p-4 outline-none"
+      />
+    </div>
+    <div class="flex flex-col gap-1.5 w-full">
+      <p class="text-[12px] font-medium">Umumiy miqdor</p>
+      <input
+        type="text"
+        class="bg-[#F8F8F7] dark:bg-inherit dark:border dark:border-[#535862] dark:text-white rounded-[12px] h-[50px] w-full p-4 outline-none"
+      />
+    </div>
+  </div>
+
+  <div class="mt-12 mb-6 sm:mb-10 text-black dark:text-white">
+    <p class="font-semibold text-[20px]">Moliyalashtirish manbalari</p>
+    <div class="flex flex-col gap-4 mt-8">
+      {
+        [
+          "Venchur kapital",
+          "Angel investor",
+          "Grantlar",
+          "Shaxsiy mablag‘lar",
+          "Boshqalar",
+        ].map((item) => (
+          <div class="flex gap-4">
+            <button class="text-white dark:text-black w-8 h-8 rounded-[8px] border border-[#F28E46] active:bg-[#F28E46] cursor-pointer">
+              &#10003;
+            </button>
+            <p class="font-medium text-[18px]">{item}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="flex flex-col gap-1.5 mt-6 font-medium w-full">
+      <p class="text-[12px] font-medium">Iltimos ko‘rsating</p>
+      <textarea
+        placeholder="100 - 150 ta belgi"
+        class="bg-[#F8F8F7] dark:bg-inherit dark:border dark:border-[#535862] dark:text-white rounded-xl h-[170px] p-4 w-full font-medium outline-none w-[398px] sm:w-[628px]"
+      ></textarea>
+    </div>
+  </div>
+</div>
