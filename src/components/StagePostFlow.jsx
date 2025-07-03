@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Steps from "./Steps.jsx";
 import StageNow from './StageNow.jsx';
 
-// JSX wrapper components for .astro files
 const InfoWrapper = () => (
     <div className="flex flex-col items-start w-[398px] sm:w-[628px]">
         <div className="text-black dark:text-white">

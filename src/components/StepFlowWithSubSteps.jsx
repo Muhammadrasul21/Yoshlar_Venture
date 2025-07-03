@@ -4,7 +4,6 @@ import Profile from './Profile.jsx';
 import Stage from './Stage.jsx';
 import StageNow from './StageNow.jsx';
 
-// JSX wrapper components for .astro files
 const InfoWrapper = () => (
     <div className="flex flex-col items-start w-[398px] sm:w-[628px]">
         <div className="text-black dark:text-white">
@@ -329,18 +328,15 @@ const StepFlowWithSubSteps = () => {
     const [subStep, setSubStep] = useState(0);
     const [stageSelection, setStageSelection] = useState({ btn1: false, btn2: false, btn3: false });
 
-    // Define the sub-steps for Step 3
     const step3Components = [InfoWrapper, StageNow, AboutWrapper];
     const step4Components = [ContactWrapper, FinanceWrapper];
 
-    // Calculate the display step number
     const getDisplayStep = () => {
         if (currentStep === 3) return 3;
         if (currentStep === 4) return 4;
         return currentStep;
     };
 
-    // Get the current component to render
     const getCurrentComponent = () => {
         switch (currentStep) {
             case 1:
@@ -356,7 +352,6 @@ const StepFlowWithSubSteps = () => {
         }
     };
 
-    // Handler for Stage button selection
     const handleStageSelection = (btnIdx) => {
         setStageSelection((prev) => {
             const newSel = { ...prev };
@@ -367,13 +362,10 @@ const StepFlowWithSubSteps = () => {
         });
     };
 
-    // Handler for Continue button
     const handleNext = () => {
         if (currentStep === 1) {
-            // Move from Profile to Stage
             setCurrentStep(2);
         } else if (currentStep === 2) {
-            // Check if both Button 1 and Button 2 are selected
             if (stageSelection.btn1 && stageSelection.btn2) {
                 setCurrentStep(3);
                 setSubStep(0);
@@ -381,20 +373,16 @@ const StepFlowWithSubSteps = () => {
                 alert('Iltimos, "G\'oya (Idea)" va "MVP is being developed" bosqichlarini tanlang.');
             }
         } else if (currentStep === 3) {
-            // Handle Step 3 sub-steps
             if (subStep < step3Components.length - 1) {
                 setSubStep(subStep + 1);
             } else {
-                // Move to Step 4
                 setCurrentStep(4);
                 setSubStep(0);
             }
         } else if (currentStep === 4) {
-            // Handle Step 4 sub-steps
             if (subStep < step4Components.length - 1) {
                 setSubStep(subStep + 1);
             }
-            // No more steps after this
         }
     };
 

@@ -4,7 +4,6 @@ import Profile from './Profile.jsx'
 import Stage from './Stage.jsx'
 import StageNow from './StageNow.jsx'
 
-// JSX wrapper components for .astro files
 const InfoWrapper = () => (
   <div className="flex flex-col items-start w-[398px] sm:w-[628px]">
     <div className="text-black dark:text-white">
@@ -359,11 +358,10 @@ const PATHS = {
 };
 
 const FormState = () => {
-  const [step, setStep] = useState(0); // 0: Profile, 1: Stage, ...
+  const [step, setStep] = useState(0); 
   const [stageSelection, setStageSelection] = useState({ btn1: false, btn2: false, btn3: false });
-  const [flow, setFlow] = useState([]); // Will be set after Stage
+  const [flow, setFlow] = useState([]); 
 
-  // Step 0: Profile, Step 1: Stage, Step 2+: dynamic
   const getStepsArray = () => {
     if (flow.length > 0) {
       return [Profile, Stage, ...flow];
@@ -373,7 +371,6 @@ const FormState = () => {
   const stepsArr = getStepsArray();
   const CurrentStepComponent = stepsArr[step];
 
-  // Handler for Stage button selection
   const handleStageSelection = (btnIdx) => {
     setStageSelection((prev) => {
       const newSel = { ...prev };
@@ -383,12 +380,8 @@ const FormState = () => {
       return newSel;
     });
   };
-
-  // Handler for Continue
   const handleNext = () => {
-    // If on Stage step, decide the flow
     if (step === 1 && flow.length === 0) {
-      // Branching logic
       if (stageSelection.btn1 && stageSelection.btn2 && !stageSelection.btn3) {
         setFlow(PATHS.info);
         setStep((s) => s + 1);
@@ -398,7 +391,6 @@ const FormState = () => {
         setStep((s) => s + 1);
         return;
       } else {
-        // Optionally, show error or require valid selection
         alert('Iltimos, to\'g\'ri bosqich(lar)ni tanlang.');
         return;
       }
